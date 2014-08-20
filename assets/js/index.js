@@ -50,7 +50,7 @@ var $post = $('.post'),
         $('.post-title').each(function () {
         	var t = $(this).text(),
         	    index = $(this).parents('.post-holder').index();
-        	$fnav.append("<a class='fn-item' item_index='"+index+"'>"+t+"</a>")
+//      	$fnav.append("<a class='fn-item' item_index='"+index+"'>"+t+"</a>")
 
         	$('.fn-item').click(function () {
         		var i = $(this).attr('item_index'),
@@ -98,7 +98,7 @@ var $post = $('.post'),
             });
         }
 
-        $('li').before('<span class="bult fa fa-asterisk icon-asterisk"></span>')
+        $('li').before('<span class="bult fa fa-check"></span>')
         $('blockquote p').prepend('<span class="quo icon-quote-left"></span>')
                 .append('<span class="quo icon-quote-right"></span>')
         

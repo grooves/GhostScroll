@@ -10,10 +10,11 @@
 
             {{#if @blog.logo}}<a id="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
             <h1 class="blog-title">{{@blog.title}}</h1>
-            <h2 class="blog-description">{{@blog.description}}</h2>
+{{!         <h2 class="blog-description">{{@blog.description}}</h2>
+            <p>☞ Visit our site <a href="https://jobs.forkwell.com/" target="_blank">Forkwell Jobs</a> with over 200 tech jobs.</p>
 
-            <a class='btn first'>Take a tour</a>
-            <a class='btn last'>Cut to the chase</a><br>
+            <a class='btn first'>最新の記事</a>
+            <a class='btn last'>末尾の記事</a><br>
             <i id='header-arrow' class="fa fa-angle-down"></i>
         </div>
     </div>
@@ -42,12 +43,33 @@
         
             <header class="post-header">
                 
-                <h2 class="post-title">{{{title}}}</h2>
+                <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+                <div class="social-button-group">
+                    <div id="social-button">
+                        <!-- Facebook LIKE Button -->
+                        <div class="fb-like" data-href="{{@blog.url}}{{url}}" data-send="false" data-layout="box_count" data-width="50" data-show-faces="true" data-font="arial"></div>
+                        <!-- /Facebook LIKE Button -->
+                    </div>
+                    <div id="social-button">
+                        <!-- Tweet Button -->
+                        <a href="https://twitter.com/share" class="twitter-share-button" data-url="{{@blog.url}}{{url}}" data-lang="en" data-related="anywhereTheJavascriptAPI" data-count="vertical">Tweet</a>
+                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                        <!-- /Tweet Button -->
+                    </div>
+                    <div id="social-button">
+                        <!-- Hatena Bookmark Button -->
+                        <a href="http://b.hatena.ne.jp/entry/{{@blog.url}}{{url}}" class="hatena-bookmark-button" data-hatena-bookmark-title="{{post-title}}" data-hatena-bookmark-layout="vertical" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+                        <!-- /Hatena Bookmark Button -->
+                    </div>
+                </div>
 
             </header>
             <section class="post-content">
                 <p>{{content characters="9999999999999"}}</p>
             </section>
+            <div align="right">
+                <span class="post-meta"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format='YYYY年MM月DD日'}}</time> {{#if tags}}<span class="tags fa fa-tags"></span> {{tags separator=", "}}{{/if}}</span>
+            </div>
         </article>
         <div class='post-after'></div>
     </div>

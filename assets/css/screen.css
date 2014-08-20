@@ -89,9 +89,10 @@ body {
     height: 100%;
     max-height: 100%;
     /*font-family: 'Droid Serif', serif;*/
-    font-family: 'Roboto Slab', serif;
+    /*font-family: 'Roboto Slab', serif;*/
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 2.0rem;
-    line-height: 1.6em;
+    line-height: 1.65em;
     color: #3A4145;
 }
 a.fa {
@@ -164,14 +165,16 @@ h6 {
 }
 
 a {
-    color: inherit;
+    color: #88cc44;
     transition: all ease 0.3s;
+    text-decoration: none;
     -webkit-transition: all ease 0.3s;
     -moz-transition: all ease 0.3s;
 }
 
 a:hover {
-    color: #86c440;
+    color: #aae266;
+    text-decoration: underline;
 }
 
 a.btn {
@@ -529,19 +532,18 @@ li {
     font-weight: bold;
 }
 a.fn-item {
+    color: #3A4145;
     display: block;
     cursor: pointer;
     opacity: 0.7;
+    margin-top: -30px;
 }
 .white {
     color: white;
 }
-a.fn-item:hover {
-    color: #9fd067;
-}
 a.fn-item.active {
-    color: #86c440;
-    opacity: 1;
+    color: #aaaaaa;
+    opacity: 0.6;
 
 }
 
@@ -560,10 +562,19 @@ a.fn-item.active {
 
 .post-title {
     margin:0;
+    font-size: 4rem;
+    line-height: 1.2em;
+    letter-spacing: -1px;
+    text-indent: -2px;
 }
 
 .post-title a {
+    color: #3A4145;
     text-decoration: none;
+}
+
+.post-title a:hover {
+  color: #9fd067;
 }
 
 .post-excerpt p {
@@ -1084,6 +1095,30 @@ a.fn-item.active {
         font-size: 1.1rem;
     }
 
+}
+
+.text-line {
+  color: #666;
+  font-size: 0.75em;
+  text-align: right;
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+.tags {
+  margin-left: 10px;
+}
+
+.social-button-group {
+  text-align: right;
+}
+
+#social-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 3px;
+  height: 75px;
+  vertical-align: top;
 }
 
 /* ==========================================================================
