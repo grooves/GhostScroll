@@ -33,6 +33,11 @@
 
     <link rel="stylesheet" href="/assets/font-awesome/css/font-awesome.min.css">
 
+    {{#post}}
+        <meta property="og:title" content="{{{title}}}" />
+        <meta property="og:description" content="{{{excerpt characters=220}}}..." />
+    {{/post}}
+
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
 </head>
